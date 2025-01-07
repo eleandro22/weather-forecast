@@ -1,0 +1,19 @@
+html,
+body {
+  font-family: $font-family;
+  background: $bg-gradient;
+  padding: 0;
+  color: $white;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  @include center-flex;
+
+  #root {
+    flex: 1;
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+  }
+}

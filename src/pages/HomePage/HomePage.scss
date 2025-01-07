@@ -1,0 +1,27 @@
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: hidden;
+
+  .main-content-heading {
+    h2 {
+      font-size: 60px;
+      line-height: 3.6rem;
+    }
+  }
+
+  .content-logo {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1;
+  }
+
+  .main-content-gaph {
+    @import "./components/TemperatureChart/TemperatureChart.scss";
+  }
+
+  .main-content-forecast {
+    @import "./components/Forecast/Forecast.scss";
+  }
+}

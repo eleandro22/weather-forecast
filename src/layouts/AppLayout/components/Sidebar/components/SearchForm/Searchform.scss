@@ -1,0 +1,24 @@
+.search-form-input {
+  display: flex;
+  border-bottom: 1px solid #ffffff70;
+  padding-bottom: 10px;
+  gap: 15px;
+
+  input {
+    background-color: transparent;
+    border: 0;
+    color: white;
+  }
+
+  input::placeholder {
+    color: rgba(255, 255, 255, 0.568);
+  }
+
+  input:focus {
+    border: none;
+    outline: none;
+  }
+
+  .search-icon {
+  }
+}
