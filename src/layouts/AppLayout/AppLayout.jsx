@@ -31,10 +31,7 @@ const AppLayout = () => {
 
   return (
     <div className="app-layout-container">
-      <Sidebar
-        getWeatherForCity={getWeatherForCity}
-        weatherData={weatherData}
-      />
+      <Sidebar getWeatherForCity={fetchWeather} weatherData={weatherData} />
       <main className="content">
         <Outlet />
       </main>

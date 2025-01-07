@@ -10,6 +10,7 @@ const fetchWeather = async (city, onSuccess, onError) => {
       throw new Error("Failed to fetch weather data");
     }
     const data = await response.json();
+    console.log(data);
     onSuccess(data);
   } catch (error) {
     onError(error);
