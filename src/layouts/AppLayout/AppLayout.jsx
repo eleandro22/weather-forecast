@@ -7,16 +7,6 @@ const AppLayout = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(null);
 
-  // const getWeatherForCity = async (city) => {
-  //   try {
-  //     setError(null);
-  //     const data = await fetchWeather(city);
-  //     setWeatherData(data);
-  //   } catch (err) {
-  //     setError("Failed to fetch weather data. Please try again.");
-  //   }
-  // };
-
   const updateWeatherData = useCallback((data) => {
     setWeatherData(data);
   }, []);

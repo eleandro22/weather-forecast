@@ -23,7 +23,9 @@ const Sidebar = ({ getWeatherForCity, weatherData }) => {
             humidity={activeWeatherData.main.humidity}
             windSpeed={activeWeatherData.wind?.speed}
             rainPercentage={
-              activeWeatherData.rain?.["1h"] || "no rain for today"
+              activeWeatherData.rain && activeWeatherData.rain["1h"]
+                ? `${activeWeatherData.rain["1h"]}`
+                : "0%"
             }
           />
           <CityDescription
