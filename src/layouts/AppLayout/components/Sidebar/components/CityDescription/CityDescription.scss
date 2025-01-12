@@ -1,11 +1,13 @@
-h3.city-description-heading {
-  font-size: 15px;
-  font-weight: 600;
-  text-transform: capitalize;
-  color: white;
-}
+.city-description {
+  .city-description-heading {
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: white;
+  }
 
-p.city-description-paragraph {
-  font-size: 12px;
-  line-height: 15px;
+  p.city-description-paragraph {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

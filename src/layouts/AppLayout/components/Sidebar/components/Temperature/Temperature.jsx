@@ -5,7 +5,9 @@ const Temperature = ({ temperature, feelsLike, description }) => {
 
       <div className="rough-details">
         <p className="feels-like"> {feelsLike}°C</p>
-        <p className="description">Is the real feel and it's {description}</p>
+        <p className="description">
+          Is the real feel and it's currently on {description}
+        </p>
       </div>
     </div>
   );

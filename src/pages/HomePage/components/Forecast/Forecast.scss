@@ -7,7 +7,7 @@
 
   &-day {
     border: 1px solid #ffffff45;
-    border-radius: 10px;
+    border-radius: $radius;
     padding: $padding-small;
     text-align: center;
     backdrop-filter: blur(4px);

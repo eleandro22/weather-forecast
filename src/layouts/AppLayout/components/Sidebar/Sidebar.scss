@@ -25,4 +25,9 @@
     flex-grow: 1;
     height: 100%;
   }
+
+  @import "./components/SearchForm/Searchform.scss";
+  @import "./components/Temperature/Temperature.scss";
+  @import "./components/WeatherDetails/WeatherDetails.scss";
+  @import "./components/CityDescription/CityDescription.scss";
 }
