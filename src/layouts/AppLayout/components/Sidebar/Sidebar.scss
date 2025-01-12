@@ -7,25 +7,22 @@
   border-right: 1px solid $border-color;
   border-radius: $radius;
   backdrop-filter: blur(10px);
-  justify-content: space-around;
+  justify-content: flex-start;
   box-sizing: border-box;
 
-  h2.temperature-big {
-    font-weight: 300;
-    font-size: 90px;
-    margin: 0;
-  }
-
-  .city-title {
-    text-transform: capitalize;
-    color: $white-faded;
-    letter-spacing: 2px;
-  }
-
-  .details {
+  .loading {
     display: flex;
-    gap: 20px;
-    justify-content: space-around;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
+  }
+
+  .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    height: 100%;
   }
 }

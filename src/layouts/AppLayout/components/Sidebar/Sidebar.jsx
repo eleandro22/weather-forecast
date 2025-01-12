@@ -4,6 +4,8 @@ import Temperature from "./components/Temperature/Temperature";
 import WeatherDetails from "./components/WeatherDetails/WeatherDetails";
 import CityDescription from "./components/CityDescription/CityDescription";
 import useWeatherDataContext from "../../../../context/WeatherDataContext/useWeatherDataContext";
+import loadingGif from "../../../../assets/gifs/loading-gif.gif";
+import errorGif from "../../../../assets/gifs/error.gif";
 
 const Sidebar = () => {
   const { weatherData, setCityName, isLoading, error } =
@@ -14,9 +16,33 @@ const Sidebar = () => {
     ? `${activeWeatherData?.rain?.["3h"]}%`
     : "no rain for today";
 
+  if (isLoading) {
+    return (
+      <div className="sidebar">
+        <SearchForm onSearch={setCityName} />
+        <div className="loading">
+          <img src={loadingGif} alt="loading" width="100" />
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="sidebar">
+        <SearchForm onSearch={setCityName} />
+        <div className="loading">
+          <p> There has been an error with the weather API call</p>
+          <img src={errorGif} alt="loading" width="250" />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="sidebar">
       <SearchForm onSearch={setCityName} />
+
       {activeWeatherData?.main &&
         activeWeatherData?.weather &&
         activeWeatherData?.wind && (
