@@ -22,14 +22,31 @@ A React-based weather application that provides a 5-day forecast and detailed we
 ├── public
 ├── src
 │ ├── api
-│ ├── assets
-│ ├── components
-│ ├── context
-│ ├── hooks
-│ ├── router
-│ ├── pages
-│ ├── styles
-│ └── utils
+│ ├── weather
+│ │ ├── action
+│ │ ├── constants
+│ │ └── hooks
+│ └── assets
+│ ├── fonts
+│ ├── gifs
+│ ├── icons
+│ └── images
+├── context
+│ └── WeatherDataContext
+├── hooks
+├── layouts
+│ ├── AppLayout
+│ └── components
+│ └── Sidebar
+├── pages
+│ ├── CityDetails
+│ └── HomePage
+│ └── components
+│ ├── Forecast
+│ └── TemperatureChart
+├── router
+├── styles
+└── utils
 └── package.json
 
 ## Technologies Used
