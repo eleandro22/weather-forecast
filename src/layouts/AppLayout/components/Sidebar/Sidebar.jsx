@@ -6,6 +6,9 @@ import CityDescription from "./components/CityDescription/CityDescription";
 
 const Sidebar = ({ getWeatherForCity, weatherData }) => {
   const activeWeatherData = weatherData ? weatherData.list[0] : null;
+  const rainPercentage = activeWeatherData?.rain?.["3h"]
+    ? `${activeWeatherData?.rain?.["3h"]}%`
+    : "no rain for today";
 
   return (
     <div className="sidebar">
@@ -22,11 +25,7 @@ const Sidebar = ({ getWeatherForCity, weatherData }) => {
             minTemp={activeWeatherData.main.temp_min}
             humidity={activeWeatherData.main.humidity}
             windSpeed={activeWeatherData.wind?.speed}
-            rainPercentage={
-              activeWeatherData.weather[0].main === "Rain"
-                ? activeWeatherData.weather[0].description
-                : "0%"
-            }
+            rainPercentage={rainPercentage}
           />
           <CityDescription
             cityName={weatherData.city?.name}
