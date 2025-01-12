@@ -1,9 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import WeatherDataContext from "../../../../context/WeatherDataContext/WeatherDataContext";
 
 const Forecast = () => {
   const { weatherData, isLoading, setCityName } =
     useContext(WeatherDataContext);
+
   const [forecastData, setForecastData] = useState([]);
 
   useEffect(() => {

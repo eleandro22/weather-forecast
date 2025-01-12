@@ -1,7 +1,15 @@
 import TemperatureChart from "./components/TemperatureChart/TemperatureChart";
 import Forecast from "./components/Forecast/Forecast";
+import { useContext, useEffect } from "react";
+import WeatherDataContext from "../../context/WeatherDataContext/WeatherDataContext";
 
 const HomePage = () => {
+  const { weatherData, setCityName } = useContext(WeatherDataContext);
+
+  useEffect(() => {
+    setCityName("Tirana");
+  }, [setCityName]);
+
   return (
     <div className="home-page-container">
       <div className="main-content-logo">
@@ -10,10 +18,7 @@ const HomePage = () => {
         </p>
       </div>
       <div className="main-content-heading">
-        <h2>
-          Storm <br />
-          with Heavy Rain
-        </h2>
+        <h2>{weatherData?.description || "Loading description..."}</h2>{" "}
       </div>
       <div className="main-content-graph">
         <TemperatureChart />
