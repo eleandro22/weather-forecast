@@ -1,13 +1,11 @@
-const CityDescription = ({ cityName, country }) => {
+import weatherDescriptions from "../../../../../../utils/weatherDescriptions";
+
+const CityDescription = ({ cityName, cityDescription }) => {
+  const detailedDescription = weatherDescriptions[cityDescription];
   return (
     <div className="city-description">
       <h3 className="city-description-heading">{cityName}</h3>
-      <p className="city-description-paragraph">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-        sollicitudin, dolor ut efficitur fermentum, eros quam posuere lacus, a
-        tristique lacus mi scelerisque sapien. Fusce sodales ut enim quis
-        dignissim.
-      </p>
+      <p className="city-description-paragraph">{detailedDescription}</p>
     </div>
   );
 };

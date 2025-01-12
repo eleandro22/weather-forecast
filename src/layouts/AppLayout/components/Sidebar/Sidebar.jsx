@@ -61,7 +61,7 @@ const Sidebar = () => {
             />
             <CityDescription
               cityName={weatherData.city?.name}
-              country={weatherData.city?.country}
+              cityDescription={activeWeatherData.weather[0]?.description}
             />
           </>
         )}
