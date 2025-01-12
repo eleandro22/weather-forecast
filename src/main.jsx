@@ -5,9 +5,9 @@ import AppRouter from "./router/index.jsx";
 import WeatherDataContextProvider from "./context/WeatherDataContext/WeatherDataContextProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <WeatherDataContextProvider>
+  <WeatherDataContextProvider>
+    <BrowserRouter>
       <AppRouter />
-    </WeatherDataContextProvider>
-  </BrowserRouter>
+    </BrowserRouter>
+  </WeatherDataContextProvider>
 );
