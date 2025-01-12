@@ -17,7 +17,7 @@ const AppLayout = () => {
 
   useEffect(() => {
     fetchWeather("Tirana", updateWeatherData, updateError);
-  }, []);
+  }, [updateWeatherData, updateError]);
 
   return (
     <div className="app-layout-container">

@@ -5,6 +5,7 @@ import pluginReact from "eslint-plugin-react";
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
+    extends: ["eslint:recommended", "plugin:react/jsx-runtime"],
     files: ["**/*.{js,mjs,cjs,jsx}"],
     languageOptions: {
       globals: globals.browser,
