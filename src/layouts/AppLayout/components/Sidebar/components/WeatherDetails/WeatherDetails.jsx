@@ -39,7 +39,7 @@ const WeatherDetails = ({
         <span role="img" aria-label="rain">
           🌧️
         </span>{" "}
-        Rain: {rainPercentage}
+        Precipitation: {rainPercentage}
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   const activeWeatherData = weatherData ? weatherData.list[0] : null;
   const rainPercentage = activeWeatherData?.rain?.["3h"]
-    ? `${activeWeatherData?.rain?.["3h"]}%`
+    ? `${activeWeatherData?.rain?.["3h"]} mm`
     : "no rain for today";
 
   if (isLoading) {
