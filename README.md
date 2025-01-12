@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Weather App
 
 A React-based weather application that provides a 5-day forecast and detailed weather information for searched cities.
@@ -38,7 +37,3 @@ A React-based weather application that provides a 5-day forecast and detailed we
 - React
 - React Router
 - OpenWeather API
-=======
-# weather-forecast
-A weather forecast web application built using React JS
->>>>>>> 1637fb3cdcfa5a4ce2aff11b7b401b405a19503a
