@@ -1,4 +1,4 @@
-import getWeather from "../action/getWeather";
+import getWeather from "../../weather/action/getWeather";
 import { useState, useEffect, useCallback } from "react";
 
 const useGetWeather = (city = "Tirana") => {
@@ -21,6 +21,12 @@ const useGetWeather = (city = "Tirana") => {
     setIsLoading(true);
     getWeather(city, updateWeatherData, updateError);
   }, [city, updateError, updateWeatherData]);
+
+  useEffect(() => {
+    if (!cityName) return;
+    setIsLoading(true);
+    getWeather(cityName, updateWeatherData, updateError);
+  }, [cityName, updateError, updateWeatherData]);
 
   return { weatherData, error, isLoading, setCityName };
 };

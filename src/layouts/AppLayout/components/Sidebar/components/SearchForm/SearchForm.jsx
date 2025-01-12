@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import { useState, useContext } from "react";
+import WeatherDataContext from "../../../../../../context/WeatherDataContext/WeatherDataContext";
 
-const SearchForm = ({ onSearch }) => {
+const SearchForm = () => {
   const [city, setCity] = useState("");
+  const { setCityName } = useContext(WeatherDataContext);
 
-  const getWeatherForcity = (e) => {
+  const getWeatherForCity = (e) => {
     e.preventDefault();
     if (city.trim()) {
-      onSearch(city);
+      setCityName(city);
       setCity("");
     } else {
       alert("Please enter a city name.");
@@ -14,7 +16,7 @@ const SearchForm = ({ onSearch }) => {
   };
 
   return (
-    <form onSubmit={getWeatherForcity} className="search-form-input">
+    <form onSubmit={getWeatherForCity} className="search-form-input">
       <img
         src="../src/assets/icons/temperature-high.svg"
         alt="temperature-icon"
