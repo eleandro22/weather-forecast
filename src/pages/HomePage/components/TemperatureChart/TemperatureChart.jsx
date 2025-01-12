@@ -41,13 +41,6 @@ const TemperatureChart = () => {
     responsive: true,
     plugins: {
       legend: {
-        display: true,
-        position: "top",
-        labels: {
-          color: "rgba(255, 255, 255, 0.8)",
-        },
-      },
-      legend: {
         display: false,
       },
       tooltip: {
