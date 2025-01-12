@@ -5,6 +5,10 @@ import WeatherDataContext from "../../context/WeatherDataContext/WeatherDataCont
 
 const HomePage = () => {
   const { weatherData, setCityName } = useContext(WeatherDataContext);
+  const activeWeatherData = weatherData?.list ? weatherData.list[0] : null;
+  const descriptionCity = activeWeatherData?.weather
+    ? activeWeatherData.weather[0]?.description
+    : "Loading description...";
 
   useEffect(() => {
     setCityName("Tirana");
@@ -18,7 +22,7 @@ const HomePage = () => {
         </p>
       </div>
       <div className="main-content-heading">
-        <h2>{weatherData?.description || "Loading description..."}</h2>{" "}
+        <h2>{descriptionCity}</h2>
       </div>
       <div className="main-content-graph">
         <TemperatureChart />
