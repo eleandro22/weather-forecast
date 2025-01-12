@@ -1,8 +1,8 @@
 .search-form-input {
   display: flex;
-  border-bottom: 1px solid #ffffff70;
-  padding-bottom: 10px;
-  gap: 15px;
+  border-bottom: 1px solid $border-color;
+  padding-bottom: $padding-small;
+  gap: $gap;
 
   input {
     background-color: transparent;
@@ -11,7 +11,7 @@
   }
 
   input::placeholder {
-    color: rgba(255, 255, 255, 0.568);
+    color: $white-faded;
   }
 
   input:focus {
@@ -19,11 +19,8 @@
     outline: none;
   }
 
-  .search-icon {
-  }
-
   button.search-button {
-    background-color: transparent;
-    border: 0px;
+    background-color: $transparent;
+    border: 0;
   }
 }
